@@ -4,6 +4,11 @@
 #
 #    pip-compile
 #
+certifi==2020.12.5        # via requests
+chardet==4.0.0            # via requests
 deepspeech-tflite==0.9.3  # via -r requirements.in
+idna==2.10                # via requests
 numpy==1.19.4             # via deepspeech-tflite
-watchdog==1.0.2           # via -r requirements.in
+pyotp==2.4.1              # via -r requirements.in
+requests==2.25.1          # via -r requirements.in
+urllib3==1.26.2           # via requests

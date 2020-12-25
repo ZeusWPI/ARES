@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  brandmeister-dmr-sea:
+    build: ./brandmeister-dmr-sea
+    volumes:
+      - shared_vol:/app/shared
+      - ./config.json:/app/config.json
+    env_file: .env
+  voice-decoder:
+    build: ./voice-decoder
+    volumes:
+      - shared_vol:/app/shared
+      - ./secrets.json:/app/secrets.json
+    env_file: .env
+
+volumes:
+  shared_vol:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
